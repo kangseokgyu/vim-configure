@@ -59,6 +59,7 @@ colorscheme VisualStudioDark
 
 set hlsearch
 set incsearch
+set ic
 
 set nu
 set cindent
@@ -96,6 +97,8 @@ call vundle#begin()
     Plugin 'https://github.com/vim-scripts/SrcExpl'
     Plugin 'https://github.com/Heorhiy/VisualStudioDark.vim'
     Plugin 'octol/vim-cpp-enhanced-highlight'
+    Plugin 'easytags.vim'
+    Plugin 'https://github.com/xolox/vim-misc'
     "Plugin 'jeaye/color_coded'
 
 " All of your Plugins must be added before the following line
@@ -132,3 +135,8 @@ let g:cpp_class_decl_highlight = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
+
+" easytags.vim
+let g:easytags_async=1
+let g:easytags_auto_highlight = 0
+let g:easytags_include_members = 1
