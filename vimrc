@@ -99,6 +99,7 @@ call vundle#begin()
     Plugin 'octol/vim-cpp-enhanced-highlight'
     Plugin 'easytags.vim'
     Plugin 'https://github.com/xolox/vim-misc'
+    Plugin 'severin-lemaignan/vim-minimap'
     "Plugin 'jeaye/color_coded'
 
 " All of your Plugins must be added before the following line
@@ -116,17 +117,19 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+let mapleader=","
+
 " nerd tree
-map ,n :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 map <C-F> :NERDTreeFind<CR>
 
 " taglist
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 40
-map ,t :TlistToggle<CR>
+map <leader>t :TlistToggle<CR>
 
 " SrcExpl
-nmap ,s :SrcExplToggle<CR>
+nmap <leader>s :SrcExplToggle<CR>
 
 " vim-cpp-enhanced-highlighting
 let g:cpp_class_scope_highlight = 1
@@ -138,5 +141,12 @@ let g:cpp_concepts_highlight = 1
 
 " easytags.vim
 let g:easytags_async=1
-let g:easytags_auto_highlight = 0
+let g:easytags_auto_highlight = 0 
 let g:easytags_include_members = 1
+
+" minimap
+let g:minimap_show='<leader>ms'
+let g:minimap_update='<leader>mu'
+let g:minimap_close='<leader>mc'
+let g:minimap_toggle='<leader>mt'
+let g:minimap_highlight='Visual'
