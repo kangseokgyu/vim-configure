@@ -52,6 +52,8 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+au BufNewFile,BufRead *.svn-base set filetype=cpp
+
 syntax enable
 
 colorscheme VisualStudioDark
